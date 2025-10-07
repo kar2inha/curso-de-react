@@ -1,5 +1,11 @@
-function Tasks() {
-  return <h1 className="shadow-lg bg-blue-400">Tasks</h1>
+function Tasks(props) {
+  return (
+    <ul className="space-y-4">
+      {props.tasks.map((task) => (
+        <li className="bg-slate-400 text-white p-2 rounded-md">{task.title}</li>
+      ))}
+    </ul>
+  );
 }
 
 export default Tasks;
