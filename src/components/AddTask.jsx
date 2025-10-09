@@ -23,7 +23,9 @@ function AddTask({ onAddTaskSubmit }) {
         onClick={() => {
           // Verificar se o título e a descrição não estão vazios.
           if (!title.trim() || !description.trim()) {
-            return alert("Por favor, preencha o título e a descrição da tarefa.");
+            return alert(
+              "Por favor, preencha o título e a descrição da tarefa."
+            );
           }
           onAddTaskSubmit(title, description);
           setTitle("");
